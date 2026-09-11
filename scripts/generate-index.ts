@@ -36,6 +36,7 @@ validateRepositoryIndex(index);
 
 const outputDirectory = path.join(repositoryRoot, "dist");
 await mkdir(outputDirectory, { recursive: true });
+await writeFile(path.join(outputDirectory, ".nojekyll"), "", "utf8");
 await writeFile(
   path.join(outputDirectory, "index.json"),
   `${JSON.stringify(index, null, 2)}\n`,

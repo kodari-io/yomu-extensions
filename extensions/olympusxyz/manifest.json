@@ -5,7 +5,7 @@
   "contractVersion": 1,
   "language": "es",
   "iconURL": "https://raw.githubusercontent.com/kodari-io/yomu-extensions/main/extensions/olympusxyz/icon.svg",
-  "downloadURL": "https://raw.githubusercontent.com/kodari-io/yomu-extensions/main/dist/extensions/olympusxyz.js",
+  "downloadURL": "https://kodari-io.github.io/yomu-extensions/extensions/olympusxyz.js",
   "entrypoint": "extensions/olympusxyz/src/index.ts",
   "artifactPath": "dist/extensions/olympusxyz.js"
 }
