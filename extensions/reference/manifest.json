@@ -1,0 +1,11 @@
+{
+  "identifier": "io.kodari.yomu.reference",
+  "name": "Yomu Reference",
+  "version": "1.0.0",
+  "contractVersion": 1,
+  "language": "en",
+  "iconURL": "https://raw.githubusercontent.com/kodari-io/yomu-extensions/main/extensions/reference/icon.svg",
+  "downloadURL": "https://raw.githubusercontent.com/kodari-io/yomu-extensions/main/dist/extensions/reference.js",
+  "entrypoint": "extensions/reference/src/index.ts",
+  "artifactPath": "dist/extensions/reference.js"
+}

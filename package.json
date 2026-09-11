@@ -1,0 +1,33 @@
+{
+  "name": "@yomu/extensions",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "extensions/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build:extensions && npm run build:index",
+    "build:extensions": "npm run build:extension:reference && npm run build:extension:olympusxyz",
+    "build:extension:reference": "esbuild extensions/reference/src/index.ts --bundle --format=iife --platform=browser --target=es2022 --minify --legal-comments=none --outfile=dist/extensions/reference.js",
+    "build:extension:olympusxyz": "esbuild extensions/olympusxyz/src/index.ts --bundle --format=iife --platform=browser --target=es2022 --minify --legal-comments=none --outfile=dist/extensions/olympusxyz.js",
+    "build:index": "node --experimental-strip-types scripts/generate-index.ts",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "verify": "npm run lint && npm run typecheck && npm run build && npm test"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^22.18.1",
+    "esbuild": "^0.28.2",
+    "eslint": "^10.10.0",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.70.0",
+    "vitest": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
